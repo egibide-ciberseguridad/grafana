@@ -26,7 +26,7 @@ services:
       - cadvisor
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v${CADVISOR_VERSION}
+    image: gcr.io/cadvisor/cadvisor:${CADVISOR_VERSION}
     ports:
       - "8080:8080"
     volumes:
