@@ -28,7 +28,6 @@ _urls: _header
 	@echo ----------------------------------
 	@echo [Grafana] http://localhost:3000
 	@echo [Prometheus] http://localhost:9090
-	@echo [cAdvisor] http://localhost:8080
 	@echo ----------------------------------
 
 _start:

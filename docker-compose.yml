@@ -23,17 +23,18 @@ services:
     ports:
       - "9090:9090"
     depends_on:
-      - cadvisor
+      - logporter
 
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor:${CADVISOR_VERSION}
-    ports:
-      - "8080:8080"
+  logporter:
+    image: lifailon/logporter:${LOGPORTER_VERSION}
     volumes:
-      - /:/rootfs:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
+    environment:
+      - DOCKER_LOG_METRICS=false
+      - DOCKER_LOG_CUSTOM_METRICS=false
+      - DOCKER_LOG_CUSTOM_QUERY=\"(err|error|ERR|ERROR)\"
+    ports:
+      - "9333:9333"
 
 volumes:
   grafana-config:

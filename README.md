@@ -14,7 +14,6 @@ Servidor de [Grafana](https://grafana.com) en contenedores Docker.
 
     - [Grafana](http://localhost:3000)
     - [Prometheus](http://localhost:9090)
-    - [cAdvisor](http://localhost:8080)
 
 > Iniciar sesión con el usuario `admin/admin` y cambiar la contraseña cuando lo pida.
 
@@ -22,4 +21,4 @@ Servidor de [Grafana](https://grafana.com) en contenedores Docker.
 
 - [Grafana documentation](https://grafana.com/docs/grafana/latest/)
 - [Prometheus](https://prometheus.io/docs/introduction/overview/)
-- [cAdvisor](https://github.com/google/cadvisor)
+- [logporter](https://github.com/Lifailon/logporter)
