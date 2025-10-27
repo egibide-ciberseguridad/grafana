@@ -31,7 +31,7 @@ _urls: _header
 	@echo ----------------------------------
 
 _start:
-	@docker compose up -d grafana
+	@docker compose up -d grafana --remove-orphans
 
 start: _header _start _urls
 
