@@ -32,8 +32,6 @@ services:
       - DOCKER_LOG_METRICS=false
       - DOCKER_LOG_CUSTOM_METRICS=false
       - DOCKER_LOG_CUSTOM_QUERY=\"(err|error|ERR|ERROR)\"
-    ports:
-      - "9333:9333"
 
 volumes:
   grafana-config:
